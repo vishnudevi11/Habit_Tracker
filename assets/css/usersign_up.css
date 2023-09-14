@@ -1,0 +1,69 @@
+/* Styling Sign-up page */
+
+@import url('https://fonts.googleapis.com/css2?family=Bellefair&family=Josefin+Sans:wght@300&family=Mr+Dafoe&family=Poppins:wght@300&display=swap');
+body {
+    margin: 0;
+    background-image: url(../images/img_2.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 130%;
+	font-family:'Bellefair',sans-serif;
+}
+h2{
+	font-family:'Bellefair',sans-serif;
+	font-weight: bold;
+	color: black;
+}
+.main-container{
+	float: right;
+	margin-right:15rem;
+    margin-top: 10%;
+    background-color: rgb(194, 161, 105);
+    border-radius: 10%;
+    padding: 2%;
+}
+.form {
+    display: flex;
+    flex-direction: column;
+}
+label{
+	/* font-weight: bold; */
+	font-size:20px;
+	margin-top:2px;
+}
+input{
+	width: 100%;
+	display: flex;
+	margin: 2px 2px;
+	padding: 5px;
+	border: none;
+	outline: none;
+	border-radius: 5px;
+}
+form .btn{
+	margin-top:4%;
+	text-align: center;
+	justify-items: center;
+	padding:3px;
+	
+	
+
+}
+button{
+	width: 40%;
+	height: 30px;
+	margin: 10px auto;
+	color: #fff;
+	background-color: rgb(219, 126, 63);
+	font-size: 1em;
+	font-weight: bold;
+	margin-top: 20px;
+	outline: none;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+}
+button:hover,
+button:focus {
+  box-shadow: 0.2em 0.3em 0.5em 0.2em rgb(229, 175, 88);
+  transform: translateXY(-0.25em);
+}

@@ -1,0 +1,91 @@
+ <!---homePage-->
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--favicon-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <!--Stylesheet-->
+    <link rel="stylesheet" href="/css/home.css">
+    <title>Habit-Tracker</title>
+ </head>
+ <body>
+     <!-- header  -->
+     <%- include('_header'); %>
+    <!--Starting Page-->
+    <% if(!locals.user) { %>
+        <img class="home-bg" src="/images/img_1.jpg">
+        <div class="welcome-title">
+             If you believe you can change<br>- if you make it a habit <br>- the change becomes real.
+        </div>
+        <form action="/users/sign-up" method="GET">
+            <button class="welcome-btn"><a href="/users/sign-up">Get Started</a></button>
+        </form>
+    <% }
+
+    <!--if no habits are added-->
+    else if(locals.user && locals.habits.length==0) { %>
+    <%= habits %>
+        <div id="noHabitText">Looks like you aren't tracking any habits yet, so...
+               <br> what do you want to start doing every day? :)</div>
+
+        <!-- button to open add habit form  -->
+        <button id="open-btn-fixed" onclick="openForm()" >Add Habit</button>
+
+        <!-- add habit form -->
+        <div class="form-popup" id="myForm">
+            <form action="/users/habit/create-habit" id="createHabit" method="POST" class="form-container">
+                <label><h1>Add a habit name to track</h1></label>
+                <input type="text" name="title" placeholder="Enter a habit" required>
+                <button type="submit" id="save-btn">Add habit</button>
+                <button type="reset" id="cancel-btn" onclick="closeForm()">Cancel</button>
+                
+            </form>
+        </div>
+    <% }
+    
+    <!--showing habits-->
+    else { %>
+        <div class="habit-page">
+            <!-- <button id="open-btn" class="button-30" onclick="openForm()" >Add Habit</button> -->
+            <div class="form" id="myForm">
+                <form action="/users/habit/create-habit" id="createHabit" method="POST" class="form-container">
+                    <label><h1>Add a habit</h1></label>
+                    <input type="text" name="title" placeholder="Enter habit" required>
+                    <button type="submit" id="save-btn">Add habit</button>
+                    <button type="reset" id="cancel-btn" onclick="closeForm()">Cancel</button>
+                    
+                </form>
+            </div>
+            <div class="habit-choice">
+                <a href="\"><i class="fa-regular fa-circle-check" style="color: #19fb09;"></i> -Done</a>
+                <a href="\"><i class="fa-regular fa-circle-xmark" style="color: #ff1100;"></i> -Not Done</a>
+                <a href="\"><i class="fa-solid fa-circle" style="color: #a5a5a5;"></i> -Not yet Started</a>
+                
+            </div>
+            
+            <div>
+                
+                <!-- weekly view -->
+                <%- include('weekly_view'); %>
+                
+                
+            </div>
+            
+
+        </div>
+    <% } %>
+
+
+
+
+
+<!-- importing this script to open/close form -->
+<script src="/js/home.js"></script>
+    
+ </body>
+ </html>
+ 
+
+

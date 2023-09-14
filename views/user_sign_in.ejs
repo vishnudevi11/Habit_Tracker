@@ -1,0 +1,20 @@
+<!-- sign-in panel -->
+
+<!--Stylesheet-->
+<link rel="stylesheet" href="/css/usersign_in.css">
+
+<div class="main-container">
+    <h2>WELCOME BACK!!!</h2>
+    <form action="/users/create-session" method="POST" class="form">
+        <label>Email</label>
+        <input type="email" name="email" placeholder="Email"  required>
+        <label>Password</label>
+        <input type="password" name="password" placeholder="Password"  required>
+        <div class="btn">
+            <button>Sign In</button>
+            <p><a href="/users/forget-password"> Forget Password?</a></p>
+            <p><a href="/users/sign-up">Don't have an account?</a></p>
+        </div>
+        
+    </form>   
+</div>

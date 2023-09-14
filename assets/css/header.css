@@ -1,0 +1,75 @@
+/* Styling header of the webpage */
+@import url('https://fonts.googleapis.com/css2?family=Bellefair&family=Josefin+Sans:wght@300&family=Mr+Dafoe&family=Poppins:wght@300&display=swap');
+body {
+    margin: 0;
+}
+
+/* Styling navBar */
+.nav-bar {
+    display: flex;
+    justify-content: space-between;
+    background-color: rgba(2, 2, 2, 0.5);
+    width: 100%;
+}
+.title {
+    font-family:'Bellefair',sans-serif;
+    font-weight: 500;
+    padding: 20px;
+}
+.title a{
+    font-size: 20px;
+    text-decoration: none;
+    color: #fff;
+}
+.userPresent {
+    font-family:'Bellefair',sans-serif;
+    display: flex;
+    font-weight: 500;
+}
+.nameOfUser {
+    font-family:'Bellefair',sans-serif;
+    font-size: 25px;
+    color: rgb(233, 252, 255);
+    padding: 10px;
+    margin: 4px;
+}
+.logOut{    
+    font-size: 25px;
+    margin: 6px;
+    padding: 10px;
+    margin-right:2rem;
+}
+
+.logOut a {
+    font-family:'Bellefair',sans-serif;
+    text-decoration: none;
+    color: rgb(233, 252, 255);
+}
+
+.noUser ul{
+    display: flex;
+    margin: 10px;
+    justify-content: space-between;
+}
+.noUser li{
+    font-family:'Bellefair',sans-serif;
+    list-style: none;
+    font-size: 20px;
+    padding: 10px;
+    font-weight: 500;
+}
+.noUser li a{
+    text-decoration: none;
+    color: rgb(233, 252, 255);
+}
+
+
+/* hover */
+.noUser li:hover {
+    text-shadow: 0 0 5px #c807e6, 0 0 15px #ff008c, 0 0 20px #ff006a,
+    0 0 40px #ff0090, 0 0 60px #ff0088, 0 0 10px #ff00c3, 0 0 98px #ff00d4;
+}
+.logOut :hover {
+    text-shadow: 0 0 5px #c807e6, 0 0 15px #ff008c, 0 0 20px #ff006a,
+    0 0 40px #ff0090, 0 0 60px #ff0088, 0 0 10px #ff00c3, 0 0 98px #ff006f;
+}

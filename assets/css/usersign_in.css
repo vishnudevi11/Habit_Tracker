@@ -1,0 +1,64 @@
+/* Styling Sign-in and forget-password page */
+@import url('https://fonts.googleapis.com/css2?family=Bellefair&family=Josefin+Sans:wght@300&family=Mr+Dafoe&family=Poppins:wght@300&display=swap');
+body {
+    margin: 1rem;
+    background-image: url(../images/img_3.jpg);
+    background-repeat: no-repeat;
+    background-size: 60% 120%;
+	font-family:'Bellefair',sans-serif;
+}
+h2{
+	font-family:'Bellefair',sans-serif;
+	font-weight: bold;
+	color: black;
+}
+.main-container{
+	float: right;
+	margin-right:10rem;
+    margin-top: 10%;
+    background-color: rgb(154, 236, 239);
+    border-radius: 10%;
+    padding: 2%;
+}
+.form {
+    display: flex;
+    flex-direction: column;
+}
+label{
+	font-size:20px;
+	margin-top:2px;
+}
+input{
+	width: 100%;
+	display: flex;
+	margin: 2px 2px;
+	padding: 5px;
+	border: none;
+	outline: none;
+	border-radius: 5px;
+}
+form .btn{
+	margin-top:3%;
+	text-align: center;
+	justify-items: center;
+	padding:5px;
+}
+button{
+	width: 50%;
+	height: 40px;
+	margin: 10px auto;
+	color: #fff;
+	background-color: rgb(10, 153, 241);
+	font-size: 1em;
+	font-weight: bold;
+	margin-top: 20px;
+	outline: none;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+}
+button:hover,
+button:focus {
+  box-shadow: 0.2em 0.3em 0.5em 0.2em rgb(3, 203, 243);
+  transform: translateXY(-0.25em);
+}

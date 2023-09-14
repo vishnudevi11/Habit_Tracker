@@ -1,0 +1,51 @@
+<!-- This page is for weekly views -->
+
+<!--favicon-->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+<% for(let habit of habits) {%>   
+    <div class="container weekly-view">
+
+        <!-- habit details in weekly view-->
+        <div class="habit-container">
+            <div class="habit-title"> <h2><%= habit.title %></h2> </div> <!--Habit title-->
+            <% for(let date of weeklyDates) { %>
+                <div class="day-container">
+                <!--date-->
+                    <div class="calender">
+                        <p><%= date %></p>
+                    </div>
+                    <% 
+                        let found;
+                        let status;
+                        habit.dates.find((item) => {
+                            if(item.date === date)
+                            {
+                                found = true;
+                                status = item.complete;
+                            }
+                        });
+                    %>
+                <!-- complete status -->
+                    <div class="fillers">
+                        <a href="/users/habit/toggle-status/?id=<%= habit._id%>&date=<%=date%>" class="mark-status">
+                            <% if(found && status=='y') { %>
+                                <i class="fa-regular fa-circle-check" style="color: #19fb09;"></i>
+                            <% } else if(found && status=='n') { %>
+                                <i class="fa-regular fa-circle-xmark" style="color: #ff1100;"></i>
+                            <% } else { %>
+                                <i class="fa-solid fa-circle"></i>
+                            <% } %>
+                        </a>
+                    </div>
+                </div>
+            <% } %>
+            <!-- option to delete -->
+            <div class="menu">
+                <a href="/users/habit/delete-habit/?id=<%=habit._id%>" style="text-decoration: none;">
+                    <i class="bi bi-trash3-fill" style="color: #fd0808;font-size:25px;"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+<% } %>

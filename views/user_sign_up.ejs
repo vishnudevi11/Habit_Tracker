@@ -1,0 +1,25 @@
+<!-- Sign-up panel -->
+
+<!--Stylesheet-->
+<link rel="stylesheet" href="/css/usersign_up.css">
+<div class="main-container">
+    <h2>CREATE A NEW ACCOUNT</h2>
+    <form action="/users/create" method="POST">
+        <label>Name</label>
+        <input type="text" name="name" placeholder="Name" required>
+        <label>Email</label>
+        <input type="email" name="email" placeholder="Email" required>
+        <label>Password</label>
+        <input type="password" name="password" placeholder="Password" required>
+        <label>Confirm Password</label>
+        <input type="password" name="confirm_password" placeholder="Confirm Password" required>
+        <div class="btn"><button>Sign Up</button>
+        <p>
+        <a href="/users/sign-in">Already have an account?</a>
+    </p>
+</div>
+        
+    </form>
+
+    
+</div>
