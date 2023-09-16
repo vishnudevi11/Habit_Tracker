@@ -3,7 +3,7 @@
 const mongoose = require('mongoose');
 
 // storing the db 
-const DB = "mongodb+srv://himadrinayak:12345@cluster0.h7n86ah.mongodb.net/habit-tracker?retryWrites=true&w=majority";
+const DB = "mongodb+srv://vishnudevis56:12345@cluster0.gs9awri.mongodb.net/?retryWrites=true&w=majority";
 
 mongoose.connect(DB).then(()=>{
     console.log('Connection successful!');
