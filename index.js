@@ -43,7 +43,7 @@ app.use(session({
         {
             
             mongoUrl:'mongodb+srv://vishnudevis56:12345@cluster0.gs9awri.mongodb.net/?retryWrites=true&w=majority',
-            autoRemover : 'disabled'
+            // autoRemover : 'disabled'
         },
         function(err){
             console.log("Error in the mongo-store");
