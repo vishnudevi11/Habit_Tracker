@@ -30,7 +30,7 @@
         <div id="noHabitText">Looks like you aren't tracking any habits yet, so...
                <br> what do you want to start doing every day? :)</div>
 
-        <!-- button to open add habit form  -->
+        <!-- button is to add habit -->
         <button id="open-btn-fixed" onclick="openForm()" >Add Habit</button>
 
         <!-- add habit form -->
@@ -61,26 +61,16 @@
             <div class="habit-choice">
                 <a href="\"><i class="fa-regular fa-circle-check" style="color: #19fb09;"></i> -Done</a>
                 <a href="\"><i class="fa-regular fa-circle-xmark" style="color: #ff1100;"></i> -Not Done</a>
-                <a href="\"><i class="fa-solid fa-circle" style="color: #a5a5a5;"></i> -Not yet Started</a>
-                
-            </div>
-            
-            <div>
-                
+                <a href="\"><i class="fa-solid fa-circle" style="color: #a5a5a5;"></i> -Not yet Started</a>  
+            </div>  
+            <div>   
                 <!-- weekly view -->
                 <%- include('weekly_view'); %>
-                
-                
             </div>
             
 
         </div>
     <% } %>
-
-
-
-
-
 <!-- importing this script to open/close form -->
 <script src="/js/home.js"></script>
     
