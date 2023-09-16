@@ -1,6 +1,6 @@
 // require passport
 const passport = require('passport');
-// used for authentication
+//authentication
 const LocalStrategy = require('passport-local').Strategy;
 
 const User = require('../models/user');
@@ -28,16 +28,12 @@ passport.serializeUser(function(user, done){
 // deserializing the user
 passport.deserializeUser(async function(id, done){
     let userId = await User.findById(id);
-    if(!userId){
-        console.log("Error in passport_local/deserializeUser");
-        return ;
-    } 
-    return done(null, userId);
+    done(null, userId);
 });
 
 // Checking authentication
 passport.checkAuthentication = function (req, res, next){
-    // if user is signed in , then pass on the request to the next fucntion (controller's action)
+    // if user is signed in , then pass the request
     if(req.isAuthenticated()){
         return next();
     }
