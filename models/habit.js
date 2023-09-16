@@ -8,9 +8,6 @@ const habitSchema = new mongoose.Schema({
         type: String,
         required : true
     },
-    desc: {
-        type: String
-    },
     user: {
         type: mongoose.Schema.Types.ObjectId,
         ref: 'User'
