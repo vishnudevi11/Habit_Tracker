@@ -1,4 +1,4 @@
-// To set flash
+// To set flash message
 
 module.exports.setFlash = function(req,res,next){
     res.locals.flash={
