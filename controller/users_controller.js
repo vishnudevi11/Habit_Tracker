@@ -59,7 +59,7 @@ module.exports.createSession = async function(req, res) {
     return res.redirect('/');
 }
 
-// signs out the user
+// sign out
 module.exports.destroySession = async function(req, res, done) {
     req.logout((err) => {
         if (err) {
