@@ -1,7 +1,7 @@
 # Habit_Tracker
 Created web application,which helps user to create,update and delete habits on daily basis.The user can track their
 habit in the mode of done,not done and not yet started.It is a specific app for user,which means user can sign-in/sign-up 
-the habit tracker.Project build tech stack consisting of NodeJS,Express,MongoDB,ejs.The data are stored and managed 
+and tracker their habit.Project build tech stack consisting of NodeJS,Express,MongoDB,ejs.The data are stored and managed 
 by mongodb.
 _______________________________________________________________________________________________________________________
 ## **How to Setup the project?**
