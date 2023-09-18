@@ -19,7 +19,7 @@ npm start
 * Visit local browser-http://localhost:7000/
 * Hosted Link-https://habit-tracker-app-hhhi.onrender.com
 ________________________________________________________________________________________________________________________
-## **Features**
+## **Step by step Procedure**
 * **Sign-Up/Sign-In** into your account.
 * Click the **"Add-Habit"** button to create a new habit.
 * Give a **habit name**,which you want to track.
